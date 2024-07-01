@@ -4,7 +4,6 @@
 (이코테 2021) 이것이 취업을 위한 코딩 테스트다 with 파이썬 유투브 강의 기반
 
 """
-import sys
 
 a = 5.  # 5.0
 a = -.7  # -0.7
@@ -370,10 +369,11 @@ sys 라이브러리에 정의되어 있는 sys.stdin.readline() 메서드를 이
 이진 탐색, 정렬, 그래프 관련 문제에서 자주 사용된다.
 
 """
+import sys
 
 # 문자열 입력 받기
-# data = sys.stdin.readline().rstrip()
-# print(data)
+data = sys.stdin.readline().rstrip()
+print(data)
 """
 
 표준 출력 방법
