@@ -57,3 +57,11 @@ print(" \\(__)|")
 print("a", end=" ")
 print("b")
 # 출력: a b
+
+print('a', 'b', 'c')  # a b c
+print('a' + 'b' + 'c')  # abc
+
+# 별 찍기2
+n = int(input())
+for i in range(1, n + 1):
+            print(' ' * (n - i) + '*' * i)
