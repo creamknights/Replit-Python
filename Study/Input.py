@@ -31,3 +31,8 @@ while True:
     print(a + b)
   except:
     break
+
+# 백준 2563번
+array = [int(input()) for _ in range(9)]
+print(max(array))
+print(array.index(max(array)) + 1)  # index()는 값의 인덱스를 반환
