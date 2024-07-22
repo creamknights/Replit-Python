@@ -15,14 +15,13 @@ print(result)  # 출력: a, b, c
 # 빈 문자열을 구분자로 사용
 a = ['a', 'b', 'c']
 result = ''.join(a)
-print(result)  # 출력: Hello
+print(result)  # 출력: abc
 
-# 리스트 요소가 문자열이 아닌 경우 TypeError 발생
+# (***) 리스트 요소가 문자열이 아닌 경우 TypeError 발생
 # 리스트의 모든 요소를 문자열로 변환한 후에 join 사용
 numbers = [1, 2, 3]
-result = ', '.join(map(str, numbers))
-print(result)
-# 출력: 1, 2, 3
+result = ' '.join(map(str, numbers))
+print(result)  # 출력: 1 2 3
 """
 replace
 문자열 내의 특정 부분 문자열을 다른 문자열로 대체
