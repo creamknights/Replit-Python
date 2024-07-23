@@ -36,3 +36,14 @@ while True:
 array = [int(input()) for _ in range(9)]
 print(max(array))
 print(array.index(max(array)) + 1)  # index()는 값의 인덱스를 반환
+
+# 2차원 배열
+n = int(input())
+a = []
+for _ in range(n):
+  row = list(map(int, input().split()))
+  a.append(row)
+
+# 2차원 배열 초기화
+n, m = 3, 4
+a = [[0] * m for _ in range(n)]
