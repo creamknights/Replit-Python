@@ -36,6 +36,11 @@ replace
 문자열 내의 특정 부분 문자열을 다른 문자열로 대체
 대체된 새로운 문자열을 반환
 """
+a = 'hello, world'
+print(a.replace('hello', 'hi'))  # hi, world
+print(a)  # hello, world
+a = a.replace('hello', 'hi')
+print(a)  # hi, world
 
 a = 'nice to meet you'
 # 모음 a, e, i, o, u 제거
@@ -73,3 +78,55 @@ print('a' + 'b' + 'c')  # abc
 n = int(input())
 for i in range(1, n + 1):
             print(' ' * (n - i) + '*' * i)
+
+# 아스키코드 출력
+print(ord('A'))
+# 숫자를 문자로 출력
+print(chr(65))  # A
+print(chr(ord('A')))
+
+# 문자열을 정수 리스트로 변환
+num_string = '12345'
+array = list(''.join(map(str, num_string)))
+print(array)  # ['1', '2', '3', '4', '5']
+arr = list(map(int, array))
+print(array)  # [1, 2, 3, 4, 5]
+
+# 리스트 컴프리헨션을 사용하여 문자열을 정수 리스트로 변환 (백준 11720번)
+num_string = '12345'
+array = [int(char) for char in num_string]
+
+print(array)  # [1, 2, 3, 4, 5]
+
+# 백준 10809번, index() 메서드와 find 메서드
+"""
+index() 메서드는 특정 문자열에서 특정 문자의 인덱스를 반환
+ 특정 문자가 문자열에 존재하지 않으면 ValueError (예외 처리 필요)
+find() 메서드는 특정 문자가 문자열에 존재하지 않으면 -1을 반환하는 차이점
+"""
+my_string = 'python'
+print(my_string.index('p'))  # 0 (p가 위치하는 인덱스 반환)
+print(my_string.find('p'))  # 0
+print(my_string.find('a'))  # my_string에 'a'가 존재하지 않으므로 -1 반환
+
+# 백준 10988번, 팰린드롬 확인하기
+# 팰린드롬은 거꾸로 읽어도 같은 단어
+word = 'level'
+if word == word[::-1]:
+            print(1)
+else:
+            print(0)
+
+# (***) 백준 1316번, 그룹 단어의 개수 출력
+# aba, aabba, abca 는 그룹 단어가 아니다
+n = int(input())
+count = n
+for _ in range(n):
+            word = input()
+            for i in range(len(word) - 1):
+                        if word[i] == word[i + 1]:
+                                    pass
+                        elif word[i] in word[i + 2:]:
+                                    count -= 1
+                                    break
+print(count)
