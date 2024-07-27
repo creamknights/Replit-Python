@@ -554,9 +554,10 @@ for i in range(5):  # i는 0, 1, 2, 3, 4
   if scores[i] >= 80:
     print(i + 1, "번 학생은 합격입니다.")
 
-for index, score in enumerate(scores):
+# (***) 인덱스와 해당 인덱스의 요소를 튜플 형태로 반환
+for idx, score in enumerate(scores):
   if score >= 80:
-    print(i + 1, "번 학생은", score, "점으로 합격입니다.")  # 1번 학생은 90점으로 합격입니다.
+    print(idx + 1, "번 학생은", score, "점으로 합격입니다.")  # 1번 학생은 90점으로 합격입니다.
 
 # 합격 여부 판단 예제 2
 # 특정 번호의 학생은 제외
